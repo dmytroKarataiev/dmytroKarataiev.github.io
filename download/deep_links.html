@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>deep links test</title>
+</head>
+<body>
+
+<h1>My Builder</h1>
+<p>Deep links test</p><br>
+
+<p>Asset test</p>
+<a href="mybuilder://action/asset?market_id=2&asset_type=pdf&asset_id=pdf_35305">Asset link</a>
+<a href="mybuilder://action/asset?market_id=2&asset_type=pdf&asset_id=pdf_35305&language=en">Asset link with Language</a>
+
+<p>Contact test</p>
+<a href="mybuilder://action/contact?contact_id=4293794">Contact id link</a><br>
+
+<p>All assets test</p>
+<a href="mybuilder://action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book">View a book link</a><br>
+<a href="mybuilder://action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book&language=en">View a book link with Language</a><br>
+
+<br><p>Links to send within SMS (or any other app, which can't recognise a URI) - copy and send as a message<p>
+http://mybuilder/action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book<br>
+http://mybuilder/action/contact?contact_id=4150924<br>
+http://mybuilder/action/asset?market_id=2&asset_type=pdf&asset_id=pdf_35305<br>
+
+<br><p>Also, you should be able to test these links come from a web browser.</p>
+
+<a href="com.soundconcepts.apps.mybuildershare://action/asset?asset_id=video_4711">Video 4711</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/contact?contact_id=4534544">Contact 4534544</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf">View all pdfs</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=3">Third tab in the app</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/login?id=isagenixdemo&psasword=isagenixdemo">Log in isagenix</a><br>
+
+These are working on iOS, but not on Android. So I am not sure that the convention is identical between the two. Can you help me know what we need to do on this?
+
+
+
+</body>
+</html>
