@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>deep links test</title>
+<title>Deep links test</title>
 </head>
 <body>
 
 <h1>My Builder</h1>
-<p>Deep links test</p><br>
-
-<p>Asset test</p>
-<a href="mybuilder://action/asset?market_id=2&asset_type=pdf&asset_id=pdf_35305">Asset link</a>
-<a href="mybuilder://action/asset?market_id=2&asset_type=pdf&asset_id=pdf_35305&language=en">Asset link with Language</a>
-
-<p>Contact test</p>
-<a href="mybuilder://action/contact?contact_id=4293794">Contact id link</a><br>
-
-<p>All assets test</p>
-<a href="mybuilder://action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book">View a book link</a><br>
-<a href="mybuilder://action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book&language=en">View a book link with Language</a><br>
+<p>Deep links test for the isagenixdemo user. Please make sure that API has all these resources if something stopped working</p><br>
 
 <br><p>Links to send within SMS (or any other app, which can't recognise a URI) - copy and send as a message<p>
-http://mybuilder/action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book<br>
-http://mybuilder/action/contact?contact_id=4150924<br>
-http://mybuilder/action/asset?market_id=2&asset_type=pdf&asset_id=pdf_35305<br>
+http://com.soundconcepts.apps.mybuildershare/action/view-all?market_id=2&asset_type=panel&tag=3.%20The%20Look%20Book<br>
+http://com.soundconcepts.apps.mybuildershare/action/contact?contact_id=4383997<br>
+http://com.soundconcepts.apps.mybuildershare/action/asset?asset_id=video_4712<br>
 
 <br><p>Also, you should be able to test these links come from a web browser.</p>
 
-<a href="com.soundconcepts.apps.mybuildershare://action/asset?asset_id=video_4711">Video 4711</a><br>
-<a href="com.soundconcepts.apps.MyBuilderShare://action/asset?asset_id=video_4711">Case-sensitive Video 4711</a><br><br>
+<p>Asset test</p>
+<a href="com.soundconcepts.apps.mybuildershare://action/asset?asset_id=video_4712">Video 4712</a><br>
+<a href="com.soundconcepts.apps.MyBuilderShare://action/asset?asset_id=video_4712">Case-sensitive Video 4712</a><br><br>
 
+<p>Contact test</p>
 <a href="com.soundconcepts.apps.mybuildershare://action/contact?contact_id=4383997">Contact 4383997</a><br><br>
 
+<p>View All test</p>
 <a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf">View all pdfs</a><br>
-<a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf&tag=">View all pdfs, tag empty</a><br>
 <a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf&tag=Presentations">View all pdfs, tag Presentations</a><br>
-<a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf&tag=Product Information Sheets">View all pdfs, tag Product Information Sheets</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf&tag=Product Information Sheets">View all pdfs, tag Product Information Sheets</a><br><br>
+
+<p>View All test, should show all assets, as tags are incorrect</p>
+<a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf&tag=">View all pdfs, tag empty</a><br>
 <a href="com.soundconcepts.apps.mybuildershare://action/view-all?asset_type=pdf&tag=Presentions&tag=wrrrong">View all pdfs, tag wrong</a><br><br>
 
-<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=0">Zeroth tab in the app</a><br>
-<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=1">First tab in the app</a><br>
-<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=2">Second tab in the app</a><br>
-<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=3">Third tab in the app</a><br>
-<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=4">Fourth tab in the app</a><br>
+<p>View All test, should show all assets, as tags are incorrect</p>
+<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=0">Media list - Zeroth tab in the app</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=1">Contacts List - First tab in the app</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=2">Social Feed - Second tab in the app</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=3">Business section - Third tab in the app</a><br>
+<a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=4">Settings - Fourth tab in the app</a><br><br>
+
+<p>Incorrect tabs, should open a Media List</p>
 <a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=10">10th tab in the app</a><br>
 <a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=test">Incorrect tab in the app</a><br>
 <a href="com.soundconcepts.apps.mybuildershare://action/tab?tab=">Empty tab in the app</a><br>
 <a href="com.soundconcepts.apps.mybuildershare://action/tab?">No query parameter at all</a><br>
-
-<a href="com.soundconcepts.apps.mybuildershare://action/login?id=isagenixdemo&psasword=isagenixdemo">Log in isagenix</a><br>
 
 </body>
 </html>
