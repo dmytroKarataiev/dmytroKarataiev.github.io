@@ -484,7 +484,7 @@ footer .footer-below {
     overflow-y: hidden;
 }
 .carousel-inner {
-    overflow: inherit;
+    overflow: hidden;
     position: relative;
     padding: 0px;
     width: 100%;
