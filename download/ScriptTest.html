@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script Test</title>
+</head>
+<body>
+
+
+<!--Start script-->
+<script>
+
+    function calculateAllEstimateMyBenefit() {
+        let form = document.Form;
+        let employeeQuantity = form.employees.value;
+        let aggregatePayrollCost = form.payroll.value;
+        let checkBox = document.Form.Code;
+        let checkBoxValue = document.Form.Code.value;
+        let htmlBlock;
+
+
+        if (!checkBox[0].checked && !checkBox[1].checked) {
+            htmlBlock = `<span style="color: red">Not enough data.</span>`
+        }
+
+        if (checkBoxValue === "yes") {
+            htmlBlock =
+                `
+                    ${createPPPHtmlBlock(aggregatePayrollCost)}
+                    ${createEIDLHtmlBlock()}
+                    ${createEBLHtmlBlock()}
+                    ${createSSTDHtmlBlock(aggregatePayrollCost)}
+                    ${createERCHtmlBlock(employeeQuantity)}
+                `;
+        }
+
+        if (checkBoxValue === "no") {
+            htmlBlock =
+                `
+                    ${createSSTDHtmlBlock(aggregatePayrollCost)}
+                    ${createERCHtmlBlock(employeeQuantity)}
+                `;
+        }
+
+        document.getElementById('result').innerHTML = htmlBlock;
+
+    }
+
+    function createPPPHtmlBlock(aggregatePayrollCost) {
+        let title = `<b>Paycheck Protection Plan (PPP)</b> -- available to expanded set of businesses.`;
+        let calculation = `Receive up to $${getRoundPPPValue(aggregatePayrollCost)} but no more than $10M <br>`;
+        let description = `No repayment required IF employee headcount & compensation are held constant for 8 weeks
+                                after loan approval AND at least 75% of loan proceeds are used for payroll costs. Otherwise
+                                repay full amount within 2 years at 1% interest following optional deferral of up to 6 months.`;
+
+        return wrapInHtml(title, calculation, description);
+    }
+
+    function getRoundPPPValue(aggregatePayrollCost) {
+        return formatValue(getPPPValue(aggregatePayrollCost))
+    }
+
+    function getPPPValue(aggregatePayrollCost) {
+        let PPPValue = aggregatePayrollCost * 2.5 / 12;
+        if (PPPValue < 10000000) return PPPValue
+        else return 10000000;
+    }
+
+    function createEIDLHtmlBlock() {
+        let title = `<b>Emergency Injury Disaster Loan (EIDL) and Loan Advance.</b><br>`;
+        let calculation = `Receive loan of up to $2M, with $10K advanced within 3 days.`;
+        let description = `Repay loan amount (excluding advance) over period of up to 30 years at 3.75% interest.`;
+
+        return wrapInHtml(title, calculation, description);
+    }
+
+    function createEBLHtmlBlock() {
+        let title = `<b>Express Bridge Loan (EBL) </b>-- only available from approved SBA Express Lender with whom you
+                            have an existing banking relationship IF you cannot obtain funds on reasonable terms elsewhere.`;
+        let calculation = `Receive emergency loan of up to $25K.`;
+        let description = `Repay loan amount over period of up to 7 years at up to 9.75% interest PLUS fees.`;
+
+        return wrapInHtml(title, calculation, description);
+    }
+
+    function createSSTDHtmlBlock(aggregatePayrollCost) {
+        let SSTDValue = getRoundSSTDValue(aggregatePayrollCost);
+        let halfSSTDValue = getRoundSSTDValue(aggregatePayrollCost / 2);
+
+        let title = `<b>Social Security Tax Deferral</b>`;
+        let calculation = `Receive $${SSTDValue}. through making
+            reduced social security tax deposits through December 31, 2020.`;
+        let description = `Pay $${halfSSTDValue} by December 31, 2021
+                                <br>&<br>
+                                Pay $${halfSSTDValue} by December 31, 2022.`;
+
+        return wrapInHtml(title, calculation, description);
+    }
+
+    function getRoundSSTDValue(aggregatePayrollCost) {
+        return formatValue(0.062 * aggregatePayrollCost * 0.75);
+    }
+
+    function createERCHtmlBlock(employeeQuantity) {
+        let title = `<b>Employee Retention Credit (ERC)</b> -- only available if COVID cuts your revenue by 50%
+                                or more OR if your operations are fully or partially suspended by govt order due
+                                 to COVID, AND you do not accept a loan through the PPP or EIDL programs)`;
+        let calculation = `Receive $${getRoundERCValue(employeeQuantity)} through making reduced social security tax deposits through December 31,
+                                 2020 or applying for an advance.`;
+        let description = `No repayment required.`;
+
+        return wrapInHtml(title, calculation, description);
+
+    }
+
+    function getRoundERCValue(employeeQuantity) {
+        return formatValue(5000 * employeeQuantity);
+    }
+
+    function wrapInHtml(title, calculation, description) {
+        return `
+                        <div style="
+                                    margin: 40px">
+                            <div style="
+                                        background-color: #84cedd;
+                                        margin: 10px;
+                                        padding: 10px;
+                                        border-radius: 10px;
+                                        border: 1px solid"
+                                        >
+                                ${title}
+                            </div>
+                            <div style="
+                                        background-color: lightpink;
+                                        margin: 10px;
+                                        padding: 10px;
+                                        border-radius: 30px;
+                                        border: 1px solid">
+                                ${calculation}
+                            </div>
+                            <div style="
+                                        background-color: darkgoldenrod;
+                                        margin: 10px;
+                                        padding: 10px;
+                                        border-radius: 30px;
+                                        border: 1px solid">
+                                ${description}
+                            </div>
+                        </div>
+                        `
+    }
+
+    function formatValue(number) {
+        let roundNumber = Math.floor(number * 100) / 100;
+        let stringNumber = roundNumber.toString();
+        let dividedNumber = stringNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        return dividedNumber;
+    }
+
+</script>
+<!--End script-->
+<!--html markup-->
+<H1>resources available to businesses</H1>
+<FORM NAME="Form">
+    <!-- Анкета -->
+    <TABLE>
+        <TR>
+            <TD>
+                <B>Tell us how many employees you have (X):</B>
+            </TD>
+            <TD>
+                <INPUT type="number" NAME="employees" SIZE=20>
+            </TD>
+        </TR>
+        <TR>
+            <TD>
+                <B>Estimate your aggregate payroll cost for the past 12 months, minus any compensation paid to an
+                    employee in excess of an annual salary of $100K (Y):</B>
+            </TD>
+            <TD>
+                <INPUT type="number" NAME="payroll" SIZE=20>
+            </TD>
+        </TR>
+        <TR>
+            <TD>
+                <B>Fewer than No 500 FTEs?</B>
+            </TD>
+            <TD>
+                <label><INPUT TYPE="radio" NAME="Code" VALUE="yes"> Yes
+                </label>
+                <BR>
+                <label><INPUT TYPE="radio" NAME="Code" VALUE="no"> No
+                </label>
+            </TD>
+        </TR>
+        <tr>
+            <td>
+                <INPUT TYPE="button" NAME="bt" VALUE="Estimate my benefits"
+                       onClick="calculateAllEstimateMyBenefit();"
+                       style="color: #fff;
+                              background-color: #328a2e;
+                              border-color: #328a2e;;
+                              padding: 6px 20px;
+                              font-size: 16px;
+                              border-radius: 15px;">
+            </td>
+        </tr>
+    </TABLE>
+
+</FORM>
+<div id="result"></div>
+<!--end of html markup-->
+
+</body>
+</html>
