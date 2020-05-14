@@ -1,0 +1,1 @@
+(function(window,$,undefined){window.zr=$.extend({},window.zr,{page:{model:{GOOGLE_SIGNIN_CLIENT_ID:"819446331585-c45eti70acs2pmdf7eggk1i33b1vb26m.apps.googleusercontent.com",google_signin_reg_method:"blog.fe.zr-google-1-tap.registration",google_signin_login_method:"blog.fe.zr-google-1-tap.login"}}});})(window,jQuery);
