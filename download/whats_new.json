@@ -1,6 +1,7 @@
 {
   "ios":[
   {
+  "id": 1,
   "title": "Fund With Debit A/B Test",
   "description": "New users now have the ability to initially fund their account with a debit card, in addition to the existing bank account funding method. Since this is implemented as an A/B test, 50% of users will see this option if they invest up to $100 with DRIP enabled and Auto-Invest disabled.",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -8,6 +9,7 @@
   "date": 1639679423090
   },
   {
+  "id": 2,
   "title": "$10 Promo",
   "description": "The iOS app now includes support for the upcoming $10 promotion. New users will see informational messages throughout the Signup process and on the User Dashboard, informing them of their eligibility for the promotion. Once a user finishes Signup, they will also see a new Dashboard module, informing them that the promotion will be applied to their account when their first transaction settles.",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -15,6 +17,7 @@
   "date": 1639679423090
   },
   {
+  "id": 3,
   "title": "Welcome Video A/B/C Test",
   "description": "Some new users will now see a Welcome Video (starring our very own Ben Miller) upon placing their initial investment. Since this is an A/B/C test, 33% of users will see the video automatically on checkout completion, while another 33% will be able to launch the video from a corresponding Dashboard module.",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -22,6 +25,7 @@
   "date": 1639679423090
   },
   {
+  "id": 4,
   "title": "Quick Invest A/B Test",
   "description": "Some new users will now be presented with an option to complete an abbreviated version of Signup upon completion of the Questionnaire flow. This abbreviated process bypasses the User Dashboard and removes choices and language related to Service Levels and Investment Strategies, to remove the friction of a complex decision. Users in this flow are placed into the Starter Service Level automatically. We’re hoping to gauge whether this more concise flow improves new investor conversion.",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -29,6 +33,7 @@
   "date": 1639679423090
   },
   {
+  "id": 5,
   "title": "Education Center Module",
   "description": "Articles from the Education Center are now available on the Investor Dashboard. This will enable investors to discover and learn more about Fundrise fundamentals. This is part of a larger strategy to drive more saturation of onboarding concepts by meeting investors in the platform as they interact with key aspects of the product.",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -36,6 +41,7 @@
   "date": 1639679423090
   },
   {
+  "id": 6,
   "title": "Integrating Add Funds and Auto-Invest into Goals (Phase 1)",
   "description": "We’ve completed the first phase of integrating Add Funds and Auto-Invest directly into the Investor Goals flows, to provide users with a more seamless experience. This release integrates Add Funds and Auto-Invest as they currently exist, without any other modifications. We will enhance this integration further in our next release. ",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -43,6 +49,7 @@
   "date": 1639679423090
   },
   {
+  "id": 7,
   "title": "Investor Update Save Improvements ",
   "description": "When a user saves an Investor Update for the first time, we now show a toast that communicates where they can find their saved updates. It also shows custom language in the case they have not yet saved an Investor Update.",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -50,6 +57,7 @@
   "date": 1639679423090
   },
   {
+  "id": 8,
   "title": "Limiting Mobile Verification Prompts",
   "description": "The iOS app now limits the number of times we prompt investors to verify their phone number after login to three prompts",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -57,6 +65,7 @@
   "date": 1639679423090
   },
   {
+  "id": 9,
   "title": "Signup Refactor Completed",
   "description": "Many of the features in this release, including Fund With Debit, $10 Promo, and Quick Invest, have been enabled by a complete architectural rework of the Signup process, which we have released in phases over the past several months. This release marks the completion of that effort, and we’re excited to see what new possibilities it unlocks for Signup in the near future!",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -66,6 +75,7 @@
 ],
   "android":[
   {
+  "id": 1,
   "title": "IRA Support",
   "description": "IRA Investors can use their Android apps to invest in their IRA portfolios.   This includes being able to add funds to their portfolio via existing IRA funds, New contribution, Transfers, and Rollovers:",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -73,6 +83,7 @@
   "date": 1639679423090
   },
   {
+  "id": 2,
   "title": "Education Center Module",
   "description": "New Investors now have access to Fundrise’s Education Center from the Dashboard.  These articles are populated by the server so we can show different Education Articles to users:",
   "uri": "https://fundrise.com/investor-update/413/view",
@@ -80,6 +91,7 @@
   "date": 1639679423090
   },
   {
+  "id": 3,
   "title": "Video Player Improvements",
   "description": "The Android team was using a slightly older library for playing videos to our users.  We updated our videos to now use Android’s ExoPlayer library.  The team has noticed a significant difference in downloading and streaming videos so we think our user’s will greatly appreciate this improved user experience:",
   "uri": "https://fundrise.com/investor-update/413/view",
