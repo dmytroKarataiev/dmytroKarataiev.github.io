@@ -69,21 +69,21 @@
   "title": "IRA Support",
   "description": "IRA Investors can use their Android apps to invest in their IRA portfolios.   This includes being able to add funds to their portfolio via existing IRA funds, New contribution, Transfers, and Rollovers:",
   "uri": "https://fundrise.com/investor-update/413/view",
-  "images": ["http://adkdevelopment.com/download/android_0.png"],
+  "images": ["https://github.com/dmytroKarataiev/dmytroKarataiev.github.io/blob/master/download/android_0.png?raw=true"],
   "date": 1639679423090
   },
   {
   "title": "Education Center Module",
   "description": "New Investors now have access to Fundrise’s Education Center from the Dashboard.  These articles are populated by the server so we can show different Education Articles to users:",
   "uri": "https://fundrise.com/investor-update/413/view",
-  "images": ["http://adkdevelopment.com/download/android_1.png"],
+  "images": ["https://github.com/dmytroKarataiev/dmytroKarataiev.github.io/blob/master/download/android_1.png?raw=true"],
   "date": 1639679423090
   },
   {
   "title": "Video Player Improvements",
   "description": "The Android team was using a slightly older library for playing videos to our users.  We updated our videos to now use Android’s ExoPlayer library.  The team has noticed a significant difference in downloading and streaming videos so we think our user’s will greatly appreciate this improved user experience:",
   "uri": "https://fundrise.com/investor-update/413/view",
-  "images": ["http://adkdevelopment.com/download/android_2.png"],
+  "images": ["https://github.com/dmytroKarataiev/dmytroKarataiev.github.io/blob/master/download/android_2.png?raw=true"],
   "date": 1639679423090
   }
 ]
